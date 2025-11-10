@@ -26,4 +26,10 @@ urlpatterns = [
     path('dynamic/', views.dynamicResponse, name='dynamic'),
     path('health/', views.health, name='health'),
     path('add/', views.addStudent, name='add'),
+
 ]
+
+
+
+#get, post, put, delete
+
