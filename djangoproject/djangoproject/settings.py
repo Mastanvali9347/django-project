@@ -22,6 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-rvomk@5yb+pq@8tu$7y+$+%qvoj4(0^8p=dmy%^@5sgga5rsvb'
 
+JWT_SECRET = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtdXN0YWZhIiwiZW1haWwiOiJtdW5uYTEyM0BnbWFpbC5jb20ifQ.ujKzetcfsKNBF52OuvCWcb9c10qe8Li3um_18IwOiDU"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -49,6 +51,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'basic.middleware.basicMiddleware',
+    'basic.middleware.signupMiddleware',
+    'basic.middleware.UsernameMiddleware',
+    'basic.middleware.SscMiddleware',
+    'basic.middleware.MedicalFitMiddleware',
+    'basic.middleware.AgeMiddleware',
 ]
 
 ROOT_URLCONF = 'djangoproject.urls'

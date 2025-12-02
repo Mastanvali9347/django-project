@@ -22,14 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('greet/', views.greet, name='greet'),
     path('greet1/', views.greet1, name='greet1'),
-    path('greetinfo/', views.greetinfo, name='greetinfo'),  # ← Missing comma added here
+    path('greetinfo/', views.greetinfo, name='greetinfo'),
     path('dynamic/', views.dynamicResponse, name='dynamic'),
     path('health/', views.health, name='health'),
     path('add/', views.addStudent, name='add'),
-
+    path('signup/', views.signup_api, name='signup'),
+    path('login/', views.login_api, name='login'),
 ]
-
-
-
-#get, post, put, delete
 
